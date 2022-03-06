@@ -12,3 +12,6 @@ def fact(n):
         ans.append(n)
     return ans
 
+# N = 100
+# print(fact(N))  
+
