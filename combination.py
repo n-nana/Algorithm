@@ -1,11 +1,11 @@
 def ncr(n, r, mod):
     if r > n:
         return 0
-    rec = 1
+    x = 1
     for i in range(r):
-        rec *= (n-i)
-        rec *= pow(i+1, mod-2, mod)
-        rec %= mod
-    return rec
+        x *= (n-i)
+        x *= pow(i+1, mod-2, mod)
+        x %= mod
+    return x
 
 #print(ncr(10,5,10**9+7))
