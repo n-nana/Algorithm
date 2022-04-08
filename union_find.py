@@ -1,4 +1,3 @@
-#ABC238E - Range Sums
 
 class UnionFind:
     
