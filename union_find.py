@@ -2,9 +2,10 @@
 class UnionFind:
     
     def __init__(self, n):
-        self.par = [-1]*n #
-        self.rank = [0]*n # 木の高さ
-    
+        self.par = [-1]*n
+        self.rank = [0]*n
+        self.siz = [1]*n
+
     #xのrootを取得
     def find(self, x):
         if self.par[x] == -1:
@@ -24,13 +25,18 @@ class UnionFind:
         self.par[ry] = rx
         if self.rank[rx] == self.rank[ry]:
             self.rank[rx] += 1
+            
+        self.siz[rx] += self.siz[ry]
         
         return True
             
     #xとyが同一groupかどうか
     def check(self, x, y):
         return self.find(x) == self.find(y)
-
+    
+    # xを含む木のサイズ
+    def size(self, x):
+        return self.siz[self.find(x)]
 
 #---------------------------------------------------
 N,Q = map(int, input().split())
