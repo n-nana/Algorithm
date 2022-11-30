@@ -43,16 +43,16 @@ class UnionFind:
         return self.siz[self.root(x)]
 
 #---------------------------------------------------
-N,Q = map(int,input().split())
-uf = UnionFind(N)
+#N,Q = map(int,input().split())
+#uf = UnionFind(N)
 
-for _ in range(Q):
-    c,x,y = map(int,input().split())
-    if c == 0: 
-        uf.merge(x,y)
-    else:
-        if uf.issame(x,y): 
-            print(1)
-        else: 
-            print(0)
+#for _ in range(Q):
+#    c,x,y = map(int,input().split())
+#    if c == 0: 
+#        uf.merge(x,y)
+#    else:
+#        if uf.issame(x,y): 
+#            print(1)
+#        else: 
+#            print(0)
 
