@@ -1,9 +1,10 @@
 # 素因数分解
 
 def fact(n):
+    _N = n #上限
     ans = []
     i = 2
-    while i*i <= N:
+    while i*i <= _N:
         if n%i == 0:
             ans.append(i)
             n //= i
