@@ -1,3 +1,4 @@
+# 素因数分解
 
 def fact(n):
     ans = []
@@ -8,7 +9,7 @@ def fact(n):
             n //= i
         else:
             i += 1
-    if n!= 1:
+    if n != 1:
         ans.append(n)
     return ans
 
