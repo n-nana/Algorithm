@@ -10,7 +10,7 @@ class PrefixSum2D():
             for j in range(self.W):
                 self.PS[i+1][j+1] = self.PS[i+1][j] + self.PS[i][j+1] - self.PS[i][j] + arr[i][j]
                 
-    def query(self, y0, x0, y1, x1)
+    def query(self, y0, x0, y1, x1):
         return self.PS[y1][x1] - self.PS[y1][x0] - self.PS[y0][x1] + self.PS[y0][x0]
 
 #--------------------------------
