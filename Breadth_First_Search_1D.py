@@ -12,7 +12,7 @@ def bfs(start, edge): #始点,edge
     deq.append(start)
     while len(deq) > 0:
         crr = deq.popleft()
-        for nxt in E[crr]:
+        for nxt in edge[crr]:
             if dist[nxt] == INF:
                 dist[nxt] = dist[crr] + 1
                 deq.append(nxt)
