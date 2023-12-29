@@ -6,7 +6,8 @@ def segfunc(x, y): #操作 <問題にあわせる>
     return x^y
 
 ide_ele = 0 #単位元 <問題にあわせる>
-#ide_ele = (1<<31) - 1
+#ide_ele = float("inf")
+#ide_ele = (1<<31) - 1 #範囲に注意
 
 class SegTree:
     def __init__(self, init_val, segfunc, ide_ele):
@@ -61,8 +62,8 @@ st = SegTree(A, segfunc, ide_ele)
 for _ in range(Q):
     t,x,y = map(int,input().split())
     if t == 1:
-        st.update(x-1, y) #0-indexで入力される場合はx,y
+        st.update(x-1, y) #0-indexで入力される場合はx,y（idx-xをyで更新）
 #        print(st.dat) #更新後の木を確認
     else:
-        res = st.query(x-1, y) #0-indexで入力される場合はx,y+1
+        res = st.query(x-1, y) #0-indexで入力される場合はx,y+1（idx-xからidx-yの範囲でquery）
         print(res)
