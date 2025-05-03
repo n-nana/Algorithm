@@ -9,7 +9,7 @@ class Rolling_Hash():
         for i in range(1, n+1):
             self.power[i] = self.power[i-1]*self.base%self.mod
         for i in range(1, n+1):
-            word = ord(string[i-1]) - ord("a")
+            word = ord(string[i-1])
             self.h[i] = (self.h[i-1]*self.base + word)%self.mod
     
     def get_hash(self, l, r):
@@ -21,9 +21,6 @@ B = 26
 MOD = 10**9+33
 
 #-----------------------------------------------------
-# 参考01: 
-# https://note.com/omotiti/n/nf173d0d9f218
-
 # 参考02: modの乱数化や2次元への拡張など
 # https://tjkendev.github.io/procon-library/python/string/rolling_hash.html
 
